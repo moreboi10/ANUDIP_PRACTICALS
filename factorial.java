@@ -8,7 +8,7 @@ public class factorial {
             fact = fact * i;
         }
         System.out.println("your factorial of n is : " + fact);
-
+        sc.close();
         }
     }
 

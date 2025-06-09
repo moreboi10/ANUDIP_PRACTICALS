@@ -11,5 +11,7 @@ public class oddeven {
             System.out.println("n is odd");
 
         }
+        sc.close();
+    
     }
 }
