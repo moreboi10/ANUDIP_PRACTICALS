@@ -20,5 +20,6 @@ public class findmax {
 
         findmax obj = new findmax();
         obj.max(x, y, z);
+        sc.close();
     }
 }
