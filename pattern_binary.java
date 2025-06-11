@@ -33,6 +33,6 @@ public class pattern_binary {
             }
             System.out.println();
         }
-
+        sc.close();
     }
 }
