@@ -2,6 +2,10 @@ type of memory :
 stack = stores primitive data types 
 heap = stores non primitive data types
 
+
+stack => local vars , obj reference
+heap => oject , arrays , actual values
+w
 MDN- refer memory management 
 
 
@@ -45,3 +49,15 @@ lastIndexOf(char ch)	                                    Returns index of last o
 isEmpty()	                                                Checks if string is empty.
 split(String regex)	                                        Splits the string around matches of the regex.
 concat(String str)	                                        Concatenates the specified string to the end.
+
+
+
+
+question :
+Program Question   :Create a Java Singleton class
+The singleton pattern is a design pattern that restricts the instantiation of an object to only one instance. To do this, you’ll need to create a Singleton class that has a non-parameterized constructor.
+
+The class should have one public variable called str. It should also have a static method called getSingleInstance that’ll return the single instance of the class
+
+2) Write a phone number word decoder :
+Write a program in Java that’ll accept a phone number with letters and convert it to a phone number with only digits. For example, if you sent the program a phone number like 800888TEST, it should return (800) 8
