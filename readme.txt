@@ -61,3 +61,24 @@ The class should have one public variable called str. It should also have a stat
 
 2) Write a phone number word decoder :
 Write a program in Java that’ll accept a phone number with letters and convert it to a phone number with only digits. For example, if you sent the program a phone number like 800888TEST, it should return (800) 8
+
+not done :
+-do while loop 
+-switch case 
+-fuctions
+-2D arrays(matrix)
+-string 
+-string builder
+-sub_string
+-cocatination
+-types of constructor
+-this keyword
+
+
+
+Inheritance :
+mechanism of one class to acquire features of other class . for the purpose of code reusablity , code redundancy is not happening , additional features code maintaince easier to manage
+
+types of Inheritance:
+single level Inheritance
+multilevel Inheritance
