@@ -13,6 +13,7 @@ public class dimensionalArrays {
                 System.out.print(arr1[i]+" ");
                 
             }
+            sc.close();
         }
 
         public static void twoDimensional(int arr2[][],int n){
@@ -32,6 +33,7 @@ public class dimensionalArrays {
              }
              System.out.println();
             }
+            sc.close();
             
         }
         
@@ -40,9 +42,9 @@ public class dimensionalArrays {
             int n = sc.nextInt();
             int arr1 [] = new int[n];
             int arr2 [][] = new int[n][n];
-        // oneDimensional(arr1,n);
+        oneDimensional(arr1,n);
     //    System.out.println();
         twoDimensional(arr2, n);
-        
+        sc.close();
     }
 }

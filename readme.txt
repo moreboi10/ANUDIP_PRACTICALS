@@ -136,3 +136,32 @@ OOPS remaining :
 * interface 
 other things : 
 -> final and static keyword 
+
+Abstraction is one of the four pillar of object oriented programing in java .
+-> It means hiding internal implimentation details and showing only essential features to the user .
+
+
+* key points : 
+    * It hides complex code and show only the necessary parts.
+    * Implimentation is done using abstract classes and interface.
+    * User only sees whats necessary 
+    example:
+        driving a car -you use the steering , brake , gear but dont know the internal engine funtion 
+    
+Why use abstraction:
+    * It improves code maintainabilty.
+    * Achive loose coupling(dependency )
+    * Enchanced security.
+    * It encouraged modular programing. 
+
+Properties:
+    * An abstract class must be declared with abstract keyword.
+    * It can have abstract as well as non abstract methods.
+    * It can not be instantiated.
+    * It can have constructors and static methods also.
+    * It can have final methods .
+    * which will force the subclass not to change the body of the methods.
+    * jab bhi hum derive class ke constructor ko call karte toh pehle base class constructor call hota hai phir derive ka hota hai .
+    * It extends one class only 
+    * non-abstract method is also known as concrete methods
+    

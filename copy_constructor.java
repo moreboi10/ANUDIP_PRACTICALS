@@ -13,6 +13,9 @@ class copy {
         System.out.println("this is the name of construtor : "+name);
     }
 
+    void display(){
+        System.out.println("display nothing !!");
+    }
     
 }
 public class copy_constructor {
@@ -20,6 +23,9 @@ public class copy_constructor {
         copy c = new copy();
         copy s = new copy("rahul");
         copy e = new copy(s);
+        c.display();
+        s.display();
+        e.display();
     }
     
 }
