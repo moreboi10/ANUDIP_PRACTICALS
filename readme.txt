@@ -1,3 +1,5 @@
+JVM : converts byte code to machine code
+
 type of memory :
 stack = stores primitive data types 
 heap = stores non primitive data types
@@ -8,7 +10,8 @@ heap => oject , arrays , actual values
 w
 MDN- refer memory management 
 
-
+static : does not require obj to call static funtion 
+non static : does require obj to call static funtion 
 
 1) Find Maximum of Three Numbers:done
 2) Check Even or Odd Number:done
@@ -82,3 +85,54 @@ mechanism of one class to acquire features of other class . for the purpose of c
 types of Inheritance:
 single level Inheritance
 multilevel Inheritance
+
+
+
+
+
+polymorphism :
+polymorphism is using same name methods with different parameter to avoid using and remembering too many names 
+poly - many 
+morph - forms
+
+types:
+1 - compile time poly 
+2 - run time poly 
+
+codition of compile time poly:
+    parameter must differ in :
+        * no of methods 
+        * type of params
+        * order of params
+    -> you cannot change the methods by changing the return type alone
+
+
+
+run time polymorphism:
+    * It is also known as method overriding 
+    * It is type of polymorphism where the specific method to be callled is determined at runtime and not at compile time .
+    * This is achived through method overriding, 
+    -where subclass provides a specific implimentation of method inherited from its parent class.
+    * The JVM (java virtual machine) decides which method to execute based on the actuall object type and runtime.
+    
+    "run time pe decide hoga konsa method call hoga based on input/value"
+
+    rules of method overiding:
+        - only possible with inheritance 
+        - method must be overridden not overloaded
+        - only instance methods are polymorphic (non static & private method)
+        --the static method resolved at compile time thats why not possible
+        -private or final methods cannot be overridden
+        
+    benefit:
+        - flexibility 
+        - loose coupling 
+        - scalebility 
+        
+
+OOPS remaining : 
+* encapsulation 
+* abstraction 
+* interface 
+other things : 
+-> final and static keyword 
