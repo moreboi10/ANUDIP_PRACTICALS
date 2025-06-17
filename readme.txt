@@ -139,6 +139,7 @@ other things :
 
 Abstraction is one of the four pillar of object oriented programing in java .
 -> It means hiding internal implimentation details and showing only essential features to the user .
+->hide 
 
 
 * key points : 
@@ -165,3 +166,32 @@ Properties:
     * It extends one class only 
     * non-abstract method is also known as concrete methods
     
+    Question : Create a java program using abstraction to model a payment system ?
+    que.requirements:
+        create and abstract class name payment 
+        add and abstract method called process payment (double type)
+        create two sub_classes :
+            credit card payment 
+            UPI payment
+        Impliment the process_payment method in both sub_classes with custom logic (eg print statements)
+        In the main method :
+            use abstract class reference to call the method of both payment types (animal d1 = new dog(); reference of animal)
+
+
+INTERFACE :
+    what is and interface in java ?
+    ->An interface in java is completely abstract class that is used to group related abstract  methods it defines  what class must do, but not how it does it .
+
+key features :
+    * It uses interface keyword.
+    * All the methods are public and abstract by default.(till java 7)
+    * All the fields(variables) int interface are public static and final by default. 
+    * For inherit we use impliments keyword not extends.
+    * We can impliment multiple inheritance.
+    * for java 8+ it can have default and static methods 
+    * interface ke andar koi bhi non static method nhi hona chahiye
+    * interface ke construtor nhi ho sakte
+
+    why interface cant have construtor ?
+    ->an interface is not a class , its just a contract( blueprint) for what a class should do .
+        since interfaces cannot be instantiated ,they dont need constructors.

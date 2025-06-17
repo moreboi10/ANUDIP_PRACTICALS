@@ -19,7 +19,7 @@ class dog extends animal {
 }
 public class abstract_class {
     public static void main(String[] args) {
-        dog d1 = new dog();
+        animal d1 = new dog();
         d1.sound();
         d1.eat();
         
