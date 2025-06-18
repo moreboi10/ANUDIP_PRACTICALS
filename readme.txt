@@ -151,7 +151,7 @@ Abstraction is one of the four pillar of object oriented programing in java .
     
 Why use abstraction:
     * It improves code maintainabilty.
-    * Achive loose coupling(dependency )
+    * Achive loose coupling (dependency)
     * Enchanced security.
     * It encouraged modular programing. 
 
@@ -195,3 +195,82 @@ key features :
     why interface cant have construtor ?
     ->an interface is not a class , its just a contract( blueprint) for what a class should do .
         since interfaces cannot be instantiated ,they dont need constructors.
+
+
+                        ABSTRACT CLASS                                                                          INTERFACE
+DEFINATION              It cannot be instantiated                                                               It specifies a set of methods a class must impliment
+                        It contains both abstract as well as non abstract methods                               Methods are abstract by default
+                                
+IMPLIMENTATION          It can have both implimented and abstract methods                                       methods are abstract by default
+method                                                                                                          for java 8+ it can have static and default methods
+
+INHERITACE              Class can inherit from only one abstract class                                          class can impliment multiple interfaces 
+
+ACCESS modifiers        Methods and Properties can have any accesss modifiers                                   methods and Properties are implicitly public
+                        (public , protected and private)
+
+VARIABLES               It can have member variables (final , non final , static , non static)                  variables are implicitly public , static and final
+
+
+#FINAL keyword
+-> in java final keyword is a modifier that can be used wtih variables , methods , classes and it has different meaning depending on the context.
+
+final variable : once assigned the value of the final variable cannot be changed 
+    * It can be applied to instance , local or static variable 
+    * It often used to create constants
+    * use final with static for constants 
+    * a method marked as final cannot be overridden in subclasses .
+    * it used to prevent method behaviour from being changed.
+
+final class : a class marked as a final cannot be inherited 
+    * it used to prevent subclassing (to create subclass)
+    
+STATIC keyword :
+it is used for memory management and defines members (variables, methods, blocks, or nested classes ) that belong to the class rather then instances of class 
+
+static variable (class variable) : 
+* it shared among all instances of class .
+* only one copy exist in memory,regardless of the number of objects created.
+
+static method : 
+* static methods belongs to the class not the instance (objext)
+* it can be called without creating an object 
+* it can accesss only static data directly (know "this" keyword)
+
+static class :
+* only nested classes can be static (not top level)
+* it can access only static members of the class 
+
+static block : 
+* used for static initialisation 
+* execute once when the class is loaded (before the main method or any object is created)
+
+Quiz: what is Armstrong number ?
+-> it is a number that is equal to sum of its own digits each raised to the power of number of digits
+
+#_DBMS_ - database management system
+
+Database : 
+* A database is a organised collection of data that can be easily accessed , managed and updated
+
+Ques :what is DBMS ?
+-> A DBMS is software that allows user to interact with databases for storeing , retriving and manipulating data.
+* examples of DBMS :
+    MYSQL , ORACLE , MONGODB (nosql) , SQLserver , POSTgress SQL , Firebase , SQL lite
+
+Why use DBMS ?
+-> Efficient data management 
+* Easy data retrival 
+* less redundancy
+* security and access control 
+* backup and recovery
+
+Types of DBMS :
+* Heirarchical : data in tree like structure 
+    example : IBM , IMS
+* Network : data has many to many relationship 
+    example : IDS , TurboIMAGE
+* Relational : data in tables (rows , column) mostly used 
+    example : MYSQL , ORACLE
+* NOSQL : this is not tabular , used for big data 
+    example : MONGODB 
