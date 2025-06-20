@@ -479,3 +479,26 @@ what is JOIN in SQL ?
           *  Left join : All records from the left table and matching records from the right table 
           *  right join : ALl records from the right table and matching records from the left table 
           *  full join : all the records from right table and all the records from the left table 
+
+JDBC  : JAVA DATABASE CONNECTIVITY
+-> It is an API (application programming interface) provided by java to connect and interact with relational databases 
+
+why use JDBC ?
+-> To perform CRUD OPERATIONs :
+    Create : used to create tables or database  
+    Read  : do read or fetch OPERATIONs
+    Update :  used to update data in tables or databses  
+    delete : used to delete tables and database
+
+    * java application can interact with MYSQL , POSTgreSQL , MONGODB , ORACLE
+    * JDBC acts as a bridge between java and databases 
+
+JDBC Architecture:  
+    * Driver manager : it manages all database drivers 
+        -> it is responsible for managing JDBC driver and connecting appropriate databases
+    * Driver : INTERFACE implimented by database vendors ( has all dependency and manages connnection with database)
+        -> example : MYSQL JDBC Driver
+    * Connnection : interface for opening a session with database 
+    * Statements / prepared statements : interface to execute Queries
+    * Result set : it stores the result retrived from the database 
+
