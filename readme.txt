@@ -274,3 +274,208 @@ Types of DBMS :
     example : MYSQL , ORACLE
 * NOSQL : this is not tabular , used for big data 
     example : MONGODB 
+
+What is RDBMS ? (RELATIONAL DATABASE MANGEMENT SYSTEM)
+* It is type of dbms based on the relational type of data
+* Data is stored in tables with rows and column
+* Each table has a unique name and follows a defined structure (Schema)
+* SQL is used to interact with databases 
+* SQL is language and MYSQL is a RDBMS
+
+Key concepts of RDBMS :
+* Table / Relation : a collection of rows and column
+* rows / ordinate : a record in a table 
+* column / attribute : A Property of field of a table
+
+Schema :
+* structure of database (tables, columns, databases)
+
+Primary key : 
+* uniquely identifies each row in a table 
+
+Foreign key : 
+* It creates a link between two tables 
+
+Constraints :
+* condition rules and restriction to a database 
+    +-------------+-----------+
+    | student_name| course_id |
+    +-------------+-----------+
+    | Alice       |   101     |
+    | Bob         |   102     |
+    | Charlie     |   101     |
+    | David       |   103     |
+    | Eva         |   102     |
+    +-------------+-----------+
+    +-----------+-------------+
+    | course_id | course_name |
+    +-----------+-------------+
+    |   101     |   Math      |
+    |   102     |   Science   |
+    |   103     |   English   |
+    +-----------+-------------+
+
+NOTE : In this example, `course_id` in the `student` table is a foreign key that references the `course_id` in the `course` table.
+
+features of RDBMS:
+* data integrity : it ensures accuracy and data consistency 
+* relationship : it manages relation between tables 
+* data security : access controll and permissions 
+* concurrancy control : multiple users can  work simultaneously 
+* normalisation : reduces data redundancy
+* ACID Properties : it ensures trasaction reliabity 
+
+ACID Properties :
+    * ATOMICITY : all or none rule for trasaction 
+    * CONSISTENCY : it mantains valid states 
+    * ISOLATION : Concurrent trasaction are isolated 
+    * DURABILITY : changes are permanent 
+
+Relationship in RDBMS :
+    * one to one  : one person one passport 
+    * one to many : one course many students 
+    * many to many : student projects (via joint table)
+
+MYSQL Queries :
+DDL - data defination language
+* it is category of sql commands used to define and manage database structures like tables , Schemas constants and indexs (not data itself)
+
+key DDL commands : (not case sensitive)
+    create : create database objectS likes tables (table bananna)
+    alter : modifing the existing structure of tables (table should be present)
+    drop : delete database object (structure is also deleted)
+    truncate : removes all data from a table (structure is maintained)---cannot be rolled back and faster than delete
+    rename : change the name of database objects 
+
+    
+-- database creation 
+-- create database <database-name>;
+    create table student (
+    stu_id INT primary key,
+    name varchar(100),
+    age INT ,
+    course varchar(50));
+
+    alter table student drop column age;
+    
+    alter table student modify age MININT;
+
+    drop table student;
+    truncate table student;
+    rename table student to student_name;
+    Alter table student rename column
+        age to studentage;
+    
+
+
+DML - Data Manipulation language 
+    * It is a subset of sql which is used to manage data stored in databases 
+    * FOCUS PERFORM OPERATION IN TABLES AND NOT INTRESTED IN TABLE structure
+Commands in DML :
+    Insert : add new data (rows) into a table 
+    Update : modify existing data in a table 
+    Delete : remove data from table 
+
+    Insert INTO Table student ( name , age , roll ) values 
+    ('xyz',23,234); 
+
+    +-----------+--------+--------+--------+
+    | stu_id    | name   | age    | course |
+    +-----------+--------+--------+--------+
+    |   100     | sanket |   12   |  CE    |
+    |   101     | Alice  |   20   |  IT    |
+    |   102     | Bob    |   21   |  CS    |
+    |   103     | Carol  |   19   |  ME    |
+    |   104     | David  |   22   |  EE    |
+    |   105     | Eva    |   20   |  CE    |
+    +-----------+--------+--------+--------+
+
+-- Update command example:
+update student 
+set course = 'AI'
+where stu_id = 103;
+
+-- Resulting table after update:
++-----------+--------+--------+--------+
+| stu_id    | name   | age    | course |
++-----------+--------+--------+--------+
+|   100     | sanket |   12   |  CE    |
+|   101     | Alice  |   20   |  IT    |
+|   102     | Bob    |   21   |  CS    |
+|   103     | Carol  |   19   |  AI    |
+|   104     | David  |   22   |  EE    |
+|   105     | Eva    |   20   |  CE    |
+
+-- 3. Delete a student with stu_id = 100
+DELETE FROM student
+WHERE stu_id = 100;
+
+-- Table after deleting stu_id = 100:
++-----------+--------+--------+--------+
+| stu_id    | name   | age    | course |
++-----------+--------+--------+--------+
+|   101     | Alice  |   20   |  IT    |
+|   102     | Bob    |   21   |  CS    |
+|   103     | Carol  |   19   |  AI    |
+|   104     | David  |   22   |  EE    |
+|   105     | Eva    |   20   |  CE    |
++-----------+--------+--------+--------+
+
+-- 4. Delete all students with stu_id > 104
+DELETE FROM student
+WHERE stu_id > 104;
+
+-- Table after deleting stu_id > 104:
++-----------+--------+--------+--------+
+| stu_id    | name   | age    | course |
++-----------+--------+--------+--------+
+|   101     | Alice  |   20   |  IT    |
+|   102     | Bob    |   21   |  CS    |
+|   103     | Carol  |   19   |  AI    |
+|   104     | David  |   22   |  EE    |
++-----------+--------+--------+--------+
+
+DCL :
+Ques : What is data control language?
+-> it is a subset of SQL which is used to control access and permissions on the data stored in the database 
+
+FOCUS :
+    * security and access control ( who can do what in the database)
+
+key DCL commands:
+    1. grant : used to give specific privilages/permissions to users 
+    2. revoke : take back permissions from the user
+common privilages:
+    1. select 
+    2. insert 
+    3. update 
+    4. delete 
+    5. call 
+    6. uses
+    7. execute
+
+TCL - Trasaction Control language
+Ques : What is TCL ?
+-> it is a subset of SQL which is used to manage trasaction in a database 
+    * it ensures that a group of OPERATION like ( multiple insert, update or delete ) can be executed as a single unit of work 
+
+GOAL : maintain data integrity and consistency in multistep OPERATIONs
+
+Trasaction - A trasaction is a sequence of one or more sql OPERATIONs that are treated logical unit 
+* it must follow the ACID properties 
+key commands in TCL :
+    * commit : save all the changes made in the trasaction 
+    * rollback : undo changes done in previous trasaction
+    * savepoint : rollbacks to the savepoint 
+    
+what is JOIN in SQL ?
+->A join is use to combine rows from two or more tables based on a related columns between them , typically a foreign key 
+    * real world use cases : 
+        combine employee info with dept info , student with course , order with customer etc..
+
+    * Types of SQL JOINs:
+        Inner join : it returns only matching records from the both tables 
+        outer join :
+          *  Left join : All records from the left table and matching records from the right table 
+          *  right join : ALl records from the right table and matching records from the left table 
+          *  full join : all the records from right table and all the records from the left table 

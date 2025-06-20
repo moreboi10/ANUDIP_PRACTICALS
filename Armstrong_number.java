@@ -21,5 +21,6 @@ public class Armstrong_number {
       if (OG == sum) {
         System.out.println("The number is armstrong !!");
       }
+      sc.close();
     }
 }
