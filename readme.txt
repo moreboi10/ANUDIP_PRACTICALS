@@ -502,3 +502,20 @@ JDBC Architecture:
     * Statements / prepared statements : interface to execute Queries
     * Result set : it stores the result retrived from the database 
 
+Steps to use JDBC :
+    1 . load the JDBC driver 
+    2 . establish the connection 
+    3 . create a statement 
+    4 . execute Query
+    5 . process the result 
+    6 . close the connection 
+    
+
+project : employee management system useing JDBC   
+    * build a console based employee management system using java + JDBC + MYSQL where :
+        1. add a new employee
+        2. view all employees
+        3. update employee details 
+        5. delete an employee 
+        6. search employee by id 
+        
