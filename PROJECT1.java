@@ -36,13 +36,13 @@ public class PROJECT1 {
                 n = sc.nextInt();
                 for(int i=0 ; i<n ; i++)
                 {
-                    System.out.println("enter emp_id :");
+                    System.out.print("enter emp_id  : ");
                     int emp_id = sc.nextInt();
-                    System.out.println("enter name :");
+                    System.out.print("enter name    : ");
                     String name = sc.next();
-                    System.out.println("enter email :");
+                    System.out.print("enter email   : ");
                     String email = sc.next();
-                    System.out.println("enter salary : ");
+                    System.out.print("enter salary  : ");
                     int salary = sc.nextInt();
                     insertData(connection,emp_id,name,email,salary);
                 }
@@ -74,7 +74,7 @@ public class PROJECT1 {
                 break;
                 
                 case 5:
-                System.out.println("Enter the emp_id to show :");
+                System.out.print("Enter the emp_id to show : ");
                 int emp_id = sc.nextInt();
                 selectviaid(connection,emp_id);
 
@@ -83,7 +83,7 @@ public class PROJECT1 {
         } while (ch != 0);
         connection.close();
         System.out.println("database closed !");
- 
+        sc.close();
     }
     catch(Exception e)
     { e.printStackTrace();}

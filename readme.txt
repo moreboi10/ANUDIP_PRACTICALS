@@ -519,3 +519,20 @@ project : employee management system useing JDBC
         5. delete an employee 
         6. search employee by id 
         
+THREADS IN JAVA :
+    -> it is process of executing multiple task simultaneously . 
+    * A thread is lightweight smallest unit of process 
+
+what is multithreading ?
+-> it allows you to run two or more parts of a program (threads) concurrently to make better use of space 
+
+How to create a thread ? 
+-> there are two ways to create a threads in java :
+    * by implimenting the runnable interface 
+    * by extending the thread class  
+
+* setname (string) : sets thread name 
+* set priority : set priority (1 -10)
+* getpriority : it returns the priority of thread
+* getname : it returns the name of thread
+* start : it starts the thread

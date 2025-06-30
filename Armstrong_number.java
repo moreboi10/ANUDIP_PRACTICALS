@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.math.*;
+// import java.math.*;
 
 public class Armstrong_number {
     void sol(){

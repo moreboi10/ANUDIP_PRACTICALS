@@ -1,0 +1,38 @@
+from pptx.util import Inches
+
+# Add a new slide for the table
+slide_layout = prs.slide_layouts[5]  # Blank layout
+slide = prs.slides.add_slide(slide_layout)
+title_shape = slide.shapes.title
+title_shape = slide.shapes.add_textbox(Inches(0.5), Inches(0.2), Inches(8), Inches(0.5))
+title_frame = title_shape.text_frame
+title_frame.text = "Man-Hour Estimates"
+
+# Add table
+rows, cols = 4, 2
+left = Inches(1.5)
+top = Inches(1.2)
+width = Inches(6)
+height = Inches(0.8)
+table = slide.shapes.add_table(rows, cols, left, top, width, height).table
+
+# Set column widths
+table.columns[0].width = Inches(3)
+table.columns[1].width = Inches(3)
+
+# Header row is not required, so fill all rows
+data = [
+    ["Design", "40 hours"],
+    ["Development", "160 hours"],
+    ["Integration", "80 hours"],
+    ["Total", "280 hours"]
+]
+
+for i, (task, hours) in enumerate(data):
+    table.cell(i, 0).text = task
+    table.cell(i, 1).text = hours
+
+# Save the updated presentation
+pptx_table_path = "/mnt/data/Daikibo_Dashboard_Proposal_with_Table.pptx"
+prs.save(pptx_table_path)
+pptx_table_path
