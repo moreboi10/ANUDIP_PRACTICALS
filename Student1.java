@@ -38,8 +38,7 @@ public class Student1 {
         System.out.println("name : "+student.getName());
         System.out.println("age : "+student.getAge());
         System.out.println("dept : "+student.getDepartment());
-
-
+        
     }
 
 }

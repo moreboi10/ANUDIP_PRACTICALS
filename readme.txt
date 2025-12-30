@@ -32,6 +32,7 @@ A=(1+r/n)^nt
 
 string methods: 
 🔹 Commonly Used String Methods:
+
 Method	                                                             Description
 length()	                                                Returns the length of the string.
 charAt(int index)	                                        Returns the character at the specified index.
@@ -176,7 +177,7 @@ Properties:
         Impliment the process_payment method in both sub_classes with custom logic (eg print statements)
         In the main method :
             use abstract class reference to call the method of both payment types (animal d1 = new dog(); reference of animal)
-
+     
 
 INTERFACE :
     what is and interface in java ?
@@ -191,6 +192,7 @@ key features :
     * for java 8+ it can have default and static methods 
     * interface ke andar koi bhi non static method nhi hona chahiye
     * interface ke construtor nhi ho sakte
+
 
     why interface cant have construtor ?
     ->an interface is not a class , its just a contract( blueprint) for what a class should do .
@@ -536,3 +538,40 @@ How to create a thread ?
 * getpriority : it returns the priority of thread
 * getname : it returns the name of thread
 * start : it starts the thread
+
+
+Design Pattern :
+what is design pattern ?
+-> it is general reusable solution to a commanly occuring problem within a given context of software design 
+* they are best practices refined through trial and error by experienced software developers  
+* its not a code but blueprint for solving problems 
+* one of the main advantages of design pattern is that they facillitates communication between developers. this serve as a common language that allows developers to dicuss and understand design desision effectively 
+   eg . seeing "just use a singleton " conveys a specific design approach without needing to explain the approach
+
+* reusablity
+* maintainabilty
+* scalebility
+
+
+
+Types of design pattern :
+* creational 
+* structural
+* behaviour
+
+creational design pattern : (object creation)
+* it focuses on object creation mechanism 
+* eg  : singleton , Factory , abstract Factory , builder , prototype 
+
+structural design pattern : 
+* focuses on class object composition 
+* eg  : 
+
+behavioural design pattern:
+* it focuses on communication between objectS
+* eg   : observer , strategy , command , template , state , iterator
+
+todo pattern :
+creational  : singlyton , Factory , builder 
+structural  : adapter pattern , decorator pattern 
+behavioural : observer , strategy 

@@ -33,11 +33,11 @@ class outer {
 public class static_keyword {
     public static void main(String[] args) {
         System.out.println("main mathod called ");
-        // college coep = new college(10, "ganesh");
-        // college dyp = new college(21, "sanket");
-        // System.out.println(coep.college + "  "+ dyp.college);
-        // System.out.println(college.college);
-        outer o1 = new outer();
+        college coep = new college(10, "ganesh");
+        college dyp = new college(21, "sanket");
+        System.out.println(coep.college + "  "+ dyp.college);
+        System.out.println(college.college);
+        // outer o1 = new outer();
         
 
     }   
