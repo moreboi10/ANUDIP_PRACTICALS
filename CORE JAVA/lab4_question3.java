@@ -17,7 +17,7 @@ public class lab4_question3 {
                 oddCount++;
             }
         }
-
+        sc.close();
         System.out.println("Total even numbers: " + evenCount);
         System.out.println("Total odd numbers: " + oddCount);
     }
