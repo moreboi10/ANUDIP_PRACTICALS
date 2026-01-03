@@ -84,4 +84,24 @@ Character stream :
 * used to read and write data in characters
  used for text files majorly not necessary can be used for other files too but not efficient
 
- 
+TO Create a new file :
+    *using import java.io.file;
+    *File f = new File("path of the file with name and extension");
+    *f.createNewFile(); // this will create a new file in the given path
+
+    To Check if file is created or not :
+    * to check if file is created or not use :
+        if(f.exists()){
+            system.out.println("file created");
+        }
+        else{
+            system.out.println("file not created");
+        }
+
+TO write data to a file :
+    * using import java.io.filewriter;
+    * FileWriter fw = new FileWriter("path of the file with name and extension");
+    * fw.write("data to be written in the file");
+    * fw.close(); // to close the file writer stream
+
+
