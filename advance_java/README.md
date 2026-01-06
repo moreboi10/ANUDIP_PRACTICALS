@@ -105,3 +105,31 @@ TO write data to a file :
     * fw.close(); // to close the file writer stream
 
 
+
+
+architexcture of exception handling in java 
+                                                Throwable
+                                                    |
+                            ------------------------------------------------
+                            |                                              |
+                        Exception                                     Error
+                            |
+            --------------------------------
+            |                              |
+        Checked                       Unchecked
+    (Compile time)                 (Runtime)
+
+
+
+arraylist and linkedlist in java
+* both are used to store data dynamically
+* arraylist uses dynamic array to store the data    
+insertion and deletion is better in linkedlist as it uses doubly linked nodes to store data
+* arraylist is better in searching as it uses index to access data directly
+
+
+memory consumption : 
+* arraylist uses less memory as it uses dynamic array to store data
+* linkedlist uses more memory as it uses pointers to point to next and previous nodes along with
+
+arraylist is faster in execution as it uses index to access data directly
